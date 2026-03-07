@@ -1,47 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Home Page</title>
+    <title>João Victor | WDD 231 - Course Home Page</title>
 
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description"
+        content="Página inicial do curso WDD 231 de João Victor, apresentando a lista de cursos e certificações.">
+    <meta name="author" content="João Victor">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
 </head>
 
 <body>
-
     <header>
-        <h1>My Course Home Page</h1>
-
+        <h1>João Victor</h1>
         <nav>
-            <button id="all">All</button>
-            <button id="wdd">WDD</button>
-            <button id="cse">CSE</button>
+            <button id="menu" title="Menu"></button>
+            <ul class="navigation">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="https://github.com/jvocx" target="_blank">GitHub</a></li>
+                <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+            </ul>
         </nav>
-
     </header>
 
     <main>
+        <section class="card">
+            <h2>Course Work</h2>
+            <p>Informações sobre o progresso acadêmico e projetos desenvolvidos.</p>
+        </section>
 
-        <h2>Courses</h2>
+        <section class="card">
+            <h2>Location</h2>
+            <p>Brasil - São Paulo</p>
+        </section>
 
-        <div id="courses"></div>
+        <section class="card" id="courses">
+            <h2>Certificate Work</h2>
+            <div class="filters">
+                <button id="all">All</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
+            </div>
 
-        <h3>Total Credits: <span id="credits"></span></h3>
+            <div class="course-list"></div>
 
+            <p>Total Credits: <span id="total-credits"></span></p>
+        </section>
     </main>
 
     <footer>
-
-        <p>© <span id="year"></span> João Victor</p>
-        <p>Last Modified: <span id="lastModified"></span></p>
-
+        <p>&copy; <span id="currentyear"></span> | João Victor | Brasil</p>
+        <p id="lastModified"></p>
     </footer>
 
-    <script src="scripts/main.js"></script>
-
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
 </body>
 
 </html>
