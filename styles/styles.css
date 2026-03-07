@@ -1,87 +1,128 @@
-/* Configuração de Cores e Fontes */
+/* Variáveis para fácil manutenção e consistência */
 :root {
     --primary-color: #003366;
-    --secondary-color: #f0f0f0;
+    /* Azul escuro do banco/institucional [cite: 70] */
+    --secondary-color: #f5f5f5;
     --accent-color: #ffcc00;
+    /* Amarelo para hover e destaque */
     --text-color: #333;
+    --white: #ffffff;
+    --completed-bg: #d1e7dd;
+    /* Verde claro para cursos concluídos  */
 }
 
+/* Configuração Geral */
 body {
-    font-family: 'Roboto', sans-serif;
-    /* Google Fonts [cite: 162] */
+    font-family: 'Roboto', Helvetica, sans-serif;
+    /* Google Fonts conforme a auditoria [cite: 114, 118] */
     margin: 0;
     padding: 0;
+    background-color: var(--secondary-color);
     color: var(--text-color);
 }
 
 header {
     background-color: var(--primary-color);
-    color: white;
-    padding: 1rem;
+    color: var(--white);
+    padding: 1.5rem;
     text-align: center;
 }
 
-/* Flexbox no Menu [cite: 196] */
-nav ul {
+/* Navegação com Flexbox  */
+nav {
+    background-color: #222;
     display: flex;
-    list-style: none;
-    padding: 0;
     justify-content: center;
-    background-color: #444;
+    padding: 0.5rem;
 }
 
-nav ul li a {
-    color: white;
-    padding: 1rem;
+nav a {
+    color: var(--white);
     text-decoration: none;
+    padding: 10px 20px;
+    transition: background 0.3s;
 }
 
-nav ul li a:hover {
+nav a:hover {
     background-color: var(--accent-color);
-    color: black;
+    color: #000;
 }
 
-/* Layout do Main com Flexbox  */
+/* Layout Principal */
 main {
-    display: flex;
-    flex-direction: column;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 1rem;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+h1,
+h2 {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+/* Seções (Cards) [cite: 103] */
 .card {
     border: 1px solid #ddd;
-    margin: 1rem 0;
-    padding: 1rem;
-    background-color: var(--secondary-color);
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
 }
 
-/* Estilo da Lista de Cursos */
+/* Lista de Cursos Dinâmica com Flexbox  */
 .course-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 1rem;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .course-card {
-    padding: 15px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    min-width: 100px;
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 120px;
     text-align: center;
+    border: 1px solid #ccc;
+    font-weight: bold;
 }
 
+/* Estilo para Cursos Concluídos  */
 .completed {
-    background-color: #d1e7dd;
-    /* Marcação de cursos concluídos  */
+    background-color: var(--completed-bg);
+    border-color: #0f5132;
+    color: #0f5132;
 }
 
-footer {
-    text-align: center;
-    padding: 1rem;
+/* Botões de Filtro */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
     background-color: var(--primary-color);
     color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #002244;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 30px;
 }

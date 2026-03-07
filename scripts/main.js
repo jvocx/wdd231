@@ -1,37 +1,38 @@
-// Array de objetos de cursos 
 const courses = [
-    { subject: 'CSE', number: 110, title: 'Intro to Programming', credits: 2, completed: true },
-    { subject: 'WDD', number: 130, title: 'Web Fundamentals', credits: 2, completed: true },
-    { subject: 'CSE', number: 121, title: 'JavaScript Language', credits: 3, completed: false },
-    { subject: 'WDD', number: 231, title: 'Web Frontend Dev I', credits: 3, completed: false }
+    { code: "WDD 130", name: "Web Fundamentals", credits: 2, completed: true, subject: "WDD" },
+    { code: "WDD 131", name: "Dynamic Web Fundamentals", credits: 2, completed: true, subject: "WDD" },
+    { code: "WDD 231", name: "Web Frontend Development", credits: 2, completed: false, subject: "WDD" },
+    { code: "CSE 111", name: "Programming with Functions", credits: 2, completed: false, subject: "CSE" }
 ];
 
-const courseContainer = document.querySelector(".course-list");
-const totalCreditsDisplay = document.querySelector("#total-credits");
+function displayCourses(list) {
+    const container = document.getElementById("courses");
+    container.innerHTML = "";
 
-function displayCourses(filteredCourses) {
-    courseContainer.innerHTML = "";
+    list.forEach(course => {
+        const div = document.createElement("div");
+        div.classList.add("course-card");
+        if (course.completed) div.classList.add("completed"); // Critério #11 [cite: 249]
 
-    filteredCourses.forEach(course => {
-        const card = document.createElement("div");
-        card.className = `course-card ${course.completed ? 'completed' : ''}`; // 
-        card.innerHTML = `<strong>${course.subject} ${course.number}</strong>`;
-        courseContainer.appendChild(card);
+        div.innerHTML = `<strong>${course.code}</strong>`;
+        container.appendChild(div);
     });
 
-    // Uso obrigatório da função REDUCE 
-    const total = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
-    totalCreditsDisplay.textContent = total;
+    // Função Reduce obrigatória [cite: 249]
+    const total = list.reduce((sum, c) => sum + c.credits, 0);
+    document.getElementById("credits").textContent = total;
 }
 
-// Filtros 
-document.querySelector("#all").addEventListener("click", () => displayCourses(courses));
-document.querySelector("#cse").addEventListener("click", () => {
-    displayCourses(courses.filter(c => c.subject === 'CSE'));
+// Event Listeners em vez de onclick no HTML 
+document.getElementById("all").addEventListener("click", () => displayCourses(courses));
+document.getElementById("wdd").addEventListener("click", () => {
+    displayCourses(courses.filter(c => c.subject === "WDD"));
 });
-document.querySelector("#wdd").addEventListener("click", () => {
-    displayCourses(courses.filter(c => c.subject === 'WDD'));
+document.getElementById("cse").addEventListener("click", () => {
+    displayCourses(courses.filter(c => c.subject === "CSE"));
 });
 
 // Inicialização
 displayCourses(courses);
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("modified").textContent = document.lastModified;
