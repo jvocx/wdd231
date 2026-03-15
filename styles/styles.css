@@ -1,132 +1,67 @@
-/* Variáveis para fácil manutenção e consistência */
-:root {
-    --primary-color: #003366;
-    /* Azul escuro do banco/institucional [cite: 70] */
-    --secondary-color: #f5f5f5;
-    --accent-color: #ffcc00;
-    /* Amarelo para hover e destaque */
-    --text-color: #333;
-    --white: #ffffff;
-    --completed-bg: #d1e7dd;
-    /* Verde claro para cursos concluídos  */
-}
-
-/* Configuração Geral */
 body {
-    font-family: 'Roboto', Helvetica, sans-serif;
-    /* Google Fonts conforme a auditoria [cite: 114, 118] */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
 }
 
-header {
-    background-color: var(--primary-color);
-    color: var(--white);
+header,
+footer {
+    background-color: #003366;
+    color: white;
     padding: 1.5rem;
     text-align: center;
 }
 
-/* Navegação com Flexbox  */
-nav {
-    background-color: #222;
+
+nav ul {
     display: flex;
+    list-style: none;
     justify-content: center;
-    padding: 0.5rem;
+    gap: 15px;
+    padding: 0;
 }
 
 nav a {
-    color: var(--white);
+    color: white;
     text-decoration: none;
-    padding: 10px 20px;
-    transition: background 0.3s;
-}
-
-nav a:hover {
-    background-color: var(--accent-color);
-    color: #000;
-}
-
-/* Layout Principal */
-main {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: var(--white);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1,
-h2 {
-    text-align: center;
-    color: var(--primary-color);
-}
-
-/* Seções (Cards) [cite: 103] */
-.card {
-    border: 1px solid #ddd;
-    margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-/* Lista de Cursos Dinâmica com Flexbox  */
-.course-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.course-card {
-    background-color: #eee;
-    padding: 20px;
-    border-radius: 8px;
-    min-width: 120px;
-    text-align: center;
-    border: 1px solid #ccc;
     font-weight: bold;
 }
 
-/* Estilo para Cursos Concluídos  */
-.completed {
-    background-color: var(--completed-bg);
-    border-color: #0f5132;
-    color: #0f5132;
-}
 
-/* Botões de Filtro */
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #002244;
-}
-
-/* Rodapé */
-footer {
-    background-color: var(--primary-color);
-    color: var(--white);
-    text-align: center;
+#members.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
     padding: 1rem;
-    margin-top: 30px;
 }
 
-nav a {
-    color: white;
+#members.grid section {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+#members.list {
+    display: flex;
+    flex-direction: column;
+}
+
+#members.list section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+#members.list section img {
+    display: none;
+}
+
+
+
+#members img {
+    max-width: 100%;
+    height: auto;
 }
