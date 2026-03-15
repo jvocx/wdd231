@@ -1,0 +1,68 @@
+/* Layout Geral */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+/* Navegação Responsiva [cite: 88] */
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Grid e List [cite: 110] */
+#members.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#members.grid section {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+#members.list {
+    display: flex;
+    flex-direction: column;
+}
+
+#members.list section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+#members.list section img {
+    display: none;
+}
+
+/* Requisito: lista sem imagens  */
+
+#members img {
+    max-width: 100%;
+    height: auto;
+}

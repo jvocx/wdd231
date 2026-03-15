@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Fortaleza Tech",
+        "address": "Av Beira Mar 100",
+        "phone": "85-99999-1111",
+        "website": "https://example.com",
+        "image": "tech.jpg",
+        "membership": 3
+    },
+    {
+        "name": "Ceará Foods",
+        "address": "Rua Central 55",
+        "phone": "85-99999-2222",
+        "website": "https://example.com",
+        "image": "foods.jpg",
+        "membership": 2
+    },
+    {
+        "name": "Nordeste Motors",
+        "address": "Av Santos Dumont 500",
+        "phone": "85-99999-3333",
+        "website": "https://example.com",
+        "image": "motors.jpg",
+        "membership": 3
+    },
+    {
+        "name": "Solar Energia",
+        "address": "Rua Energia 88",
+        "phone": "85-99999-4444",
+        "website": "https://example.com",
+        "image": "solar.jpg",
+        "membership": 1
+    },
+    {
+        "name": "Fortaleza Market",
+        "address": "Av Dom Luis 90",
+        "phone": "85-99999-5555",
+        "website": "https://example.com",
+        "image": "market.jpg",
+        "membership": 1
+    },
+    {
+        "name": "Beach Hotel",
+        "address": "Av Beira Mar 200",
+        "phone": "85-99999-6666",
+        "website": "https://example.com",
+        "image": "hotel.jpg",
+        "membership": 2
+    },
+    {
+        "name": "Digital Agency",
+        "address": "Rua Tecnologia 45",
+        "phone": "85-99999-7777",
+        "website": "https://example.com",
+        "image": "agency.jpg",
+        "membership": 3
+    }
+]
