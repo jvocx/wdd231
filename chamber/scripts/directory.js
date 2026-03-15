@@ -1,53 +1,53 @@
 const url = "data/members.json";
-const cards = document.querySelector("#members");
+
+const container = document.querySelector("#members");
 
 async function getMembers() {
-    try {
-        const response = await fetch(url);
-        if (response.ok) {
-            const data = await response.json();
-            displayMembers(data);
-        }
-    } catch (error) {
-        console.error("Erro ao carregar dados:", error);
-    }
+
+    const response = await fetch(url);
+
+    const data = await response.json();
+
+    displayMembers(data);
+
 }
 
-const displayMembers = (members) => {
-    cards.innerHTML = ""; // Limpa o container
+function displayMembers(members) {
 
-    members.forEach((member) => {
-        let card = document.createElement("section");
+    members.forEach(member => {
 
-        // Atende ao requisito de exibir: Nome, Endereço, Telefone, URL, Imagem e Nível 
+        const card = document.createElement("section");
+
         card.innerHTML = `
-            <img src="images/${member.image}" alt="Logo of ${member.name}" loading="lazy" width="150">
-            <h3>${member.name}</h3>
-            <p>${member.address}</p>
-            <p>${member.phone}</p>
-            <p><strong>Level:</strong> ${member.membership === 3 ? 'Gold' : member.membership === 2 ? 'Silver' : 'Member'}</p>
-            <a href="${member.website}" target="_blank">Visit Website</a>
-        `;
-        cards.appendChild(card);
+<img src="images/${member.image}" alt="${member.name}">
+<h3>${member.name}</h3>
+<p>${member.address}</p>
+<p>${member.phone}</p>
+<a href="${member.website}" target="_blank">Visit Website</a>
+`;
+
+        container.appendChild(card);
+
     });
+
 }
-
-// Alternância de Visualização [cite: 107, 110]
-const gridbutton = document.querySelector("#grid");
-const listbutton = document.querySelector("#list");
-
-gridbutton.addEventListener("click", () => {
-    cards.classList.add("grid");
-    cards.classList.remove("list");
-});
-
-listbutton.addEventListener("click", () => {
-    cards.classList.add("list");
-    cards.classList.remove("grid");
-});
-
-// Datas do Rodapé [cite: 75, 112]
-document.querySelector("#currentYear").textContent = new Date().getFullYear();
-document.querySelector("#lastModified").textContent = `Last Modification: ${document.lastModified}`;
 
 getMembers();
+
+
+const gridButton = document.querySelector("#grid");
+const listButton = document.querySelector("#list");
+
+gridButton.addEventListener("click", () => {
+
+    container.classList.add("grid");
+    container.classList.remove("list");
+
+});
+
+listButton.addEventListener("click", () => {
+
+    container.classList.add("list");
+    container.classList.remove("grid");
+
+});
