@@ -51,3 +51,14 @@ listButton.addEventListener("click", () => {
     container.classList.remove("grid");
 
 });
+
+
+const year = document.querySelector("#currentYear");
+if (year) {
+    year.textContent = new Date().getFullYear();
+}
+
+const lastModified = document.querySelector("#lastModified");
+if (lastModified) {
+    lastModified.textContent = "Last Modified: " + document.lastModified;
+}
