@@ -4,62 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>João Victor | WDD 231</title>
 
-    <meta name="description" content="WDD 231 Course Home Page for João Victor">
+    <title>Chamber Directory | JVOCX</title>
+
+    <meta name="description" content="Chamber Directory Page">
     <meta name="author" content="João Victor Oliveira Cavalcante">
 
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
-    <script src="scripts/main.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
 </head>
 
 <body>
 
     <header>
-        <h1>JVOCX</h1>
+        <h1>JVOCX Chamber</h1>
 
-        <button id="menu-btn">☰</button>
-
-        <nav id="nav">
+        <nav>
             <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Chamber</a></li>
-                <li><a href="#">GitHub</a></li>
-                <li><a href="#">LinkedIn</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="grid">
+    <main>
 
-        <section>
-            <h2>About Me</h2>
-            <p>Future Full Stack Developer.</p>
-        </section>
+        <h2>Business Directory</h2>
 
-        <section>
-            <h2>Filters</h2>
-            <div class="buttons">
-                <button data-filter="all">All</button>
-                <button data-filter="cse">CSE</button>
-                <button data-filter="wdd">WDD</button>
-            </div>
-        </section>
+        <div class="view-buttons">
+            <button id="grid">Grid</button>
+            <button id="list">List</button>
+        </div>
 
-        <section class="full">
-            <h2>Courses</h2>
-
-            <p><strong>Total Credits:</strong> <span id="totalCredits"></span></p>
-
-            <div class="course-list"></div>
-        </section>
+        <div id="members" class="grid"></div>
 
     </main>
 
     <footer>
-        <p>© <span id="year"></span> JVOCX</p>
+        <p>© <span id="currentYear"></span> João Victor | WDD 231</p>
         <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
 

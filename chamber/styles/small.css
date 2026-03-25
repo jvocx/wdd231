@@ -1,24 +1,21 @@
-/* Layout Geral */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
 }
 
 header,
 footer {
-    background-color: #003366;
+    background: #003366;
     color: white;
-    padding: 1.5rem;
     text-align: center;
+    padding: 1rem;
 }
 
-/* Navegação Responsiva [cite: 88] */
 nav ul {
     display: flex;
-    list-style: none;
     justify-content: center;
     gap: 15px;
+    list-style: none;
     padding: 0;
 }
 
@@ -28,21 +25,35 @@ nav a {
     font-weight: bold;
 }
 
-/* Grid e List [cite: 110] */
+main {
+    padding: 1rem;
+}
+
+.view-buttons {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    margin: 0.2rem;
+    cursor: pointer;
+}
+
+/* GRID */
 #members.grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-    padding: 1rem;
 }
 
 #members.grid section {
     border: 1px solid #ddd;
     padding: 1rem;
     text-align: center;
-    background-color: #f9f9f9;
 }
 
+/* LIST */
 #members.list {
     display: flex;
     flex-direction: column;
@@ -51,18 +62,16 @@ nav a {
 #members.list section {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    align-items: center;
     padding: 0.5rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #ccc;
 }
 
-#members.list section img {
+#members.list img {
     display: none;
 }
 
-/* Requisito: lista sem imagens  */
-
+/* IMAGES */
 #members img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
