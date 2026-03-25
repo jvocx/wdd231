@@ -50,7 +50,7 @@ listButton.addEventListener("click", () => {
     container.classList.add("list");
     container.classList.remove("grid");
 
-});
+})
 
 
 const year = document.querySelector("#currentYear");
