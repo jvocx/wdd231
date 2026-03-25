@@ -30,7 +30,7 @@ function displayCourses(list) {
             div.classList.add("completed");
         }
 
-        div.textContent = `${course.code} (${course.credits} credits)`;
+        div.textContent = `${course.code} (${course.credits} credits) ${course.completed ? "✔ Completed" : ""}`;
 
         container.appendChild(div);
     });

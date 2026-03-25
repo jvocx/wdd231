@@ -1,89 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Victor | WDD 231</title>
 
-    <title>Chamber Directory | João Victor</title>
+    <meta name="description" content="WDD 231 Course Home Page for João Victor">
+    <meta name="author" content="João Victor Oliveira Cavalcante">
 
-    <meta name="description"
-        content="Explore o diretório da Câmara de Comércio e descubra empresas locais, serviços e oportunidades em nossa comunidade.">
-
-    <meta name="author" content="João Victor">
-
-    <meta property="og:title" content="Chamber of Commerce Business Directory">
-    <meta property="og:description"
-        content="Conheça empresas locais que fazem parte da Câmara de Comércio e ajudam no crescimento da nossa comunidade.">
-    <meta property="og:image" content="https://jvocx.github.io/wdd231/chamber/images/og-image.jpg">
-    <meta property="og:url" content="https://jvocx.github.io/wdd231/chamber/directory.html">
-
-    <link rel="icon" href="images/favicon.ico">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/larger.css">
 
-    <script src="scripts/directory.js" defer></script>
-
+    <script src="scripts/main.js" defer></script>
 </head>
 
 <body>
 
     <header>
+        <h1>JVOCX</h1>
 
-        <h1>Chamber of Commerce</h1>
+        <button id="menu-btn">☰</button>
 
-        <nav>
-            <ul class="navigation">
-
-                <li><a href="#">Home</a></li>
-                <li><a href="directory.html" class="active">Directory</a></li>
-                <li><a href="#">Join</a></li>
-                <li><a href="#">Contact</a></li>
-
+        <nav id="nav">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">LinkedIn</a></li>
             </ul>
         </nav>
-
     </header>
 
-    <main>
+    <main class="grid">
 
-        <h2>Business Directory</h2>
+        <section>
+            <h2>About Me</h2>
+            <p>Future Full Stack Developer.</p>
+        </section>
 
-        <div class="menu">
+        <section>
+            <h2>Filters</h2>
+            <div class="buttons">
+                <button data-filter="all">All</button>
+                <button data-filter="cse">CSE</button>
+                <button data-filter="wdd">WDD</button>
+            </div>
+        </section>
 
-            <button id="grid">Grid View</button>
-            <button id="list">List View</button>
+        <section class="full">
+            <h2>Courses</h2>
 
-        </div>
+            <p><strong>Total Credits:</strong> <span id="totalCredits"></span></p>
 
-        <article id="members" class="grid"></article>
+            <div class="course-list"></div>
+        </section>
 
     </main>
 
     <footer>
-
-        <p>&copy; <span id="currentYear"></span> João Victor | WDD 231 | Ceará</p>
-
-        <p id="lastModified"></p>
-
+        <p>© <span id="year"></span> JVOCX</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
-
-    <script>
-
-        document.getElementById("currentYear").textContent = new Date().getFullYear();
-
-        document.getElementById("lastModified").textContent =
-            "Last Modified: " + document.lastModified;
-
-    </script>
 
 </body>
 
