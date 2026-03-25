@@ -4,60 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>João Victor | WDD 231 Course Home Page</title>
-    <meta name="description" content="WDD 231 Course Home Page for João Victor Oliveira Cavalcante at BYU-Idaho.">
-    <meta name="author" content="João Victor Oliveira Cavalcante">
+    <title>João Victor | WDD 231</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="WDD 231 Course Home Page for João Victor">
+    <meta name="author" content="João Victor Oliveira Cavalcante">
 
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <script src="scripts/main.js" defer></script>
 
+    <script src="scripts/main.js" defer></script>
 </head>
 
 <body>
+
     <header>
-        <p>WDD 231 Course Home Page</p>
+        <h1>JVOCX</h1>
+
+        <button id="menu-btn">☰</button>
+
+        <nav id="nav">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Chamber</a>
-        <a href="#">GitHub</a>
-        <a href="#">LinkedIn</a>
-    </nav>
+    <main class="grid">
 
-    <main>
-        <h1>João Victor Oliveira Cavalcante</h1>
-        <section class="card">
-            <h2>Course List</h2>
+        <section>
+            <h2>About Me</h2>
+            <p>Future Full Stack Developer.</p>
+        </section>
+
+        <section>
+            <h2>Filters</h2>
             <div class="buttons">
-                <button id="all">All</button>
-                <button id="wdd">WDD</button>
-                <button id="cse">CSE</button>
+                <button data-filter="all">All</button>
+                <button data-filter="cse">CSE</button>
+                <button data-filter="wdd">WDD</button>
             </div>
-            <div id="courses" class="course-list"></div>
-            <h3>Total Credits: <span id="credits"></span></h3>
         </section>
 
-        <section class="card">
-            <h2>Location</h2>
-            <p>Fortaleza, Ceará, Brazil</p>
+        <section class="full">
+            <h2>Courses</h2>
+            <div class="course-list"></div>
         </section>
 
-        <section class="card">
-            <h2>Goals</h2>
-            <p>Obtaining CEA and CFP certifications.</p>
-        </section>
     </main>
 
     <footer>
-        <p>© <span id="year"></span> João Victor | Fortaleza, Brazil</p>
-        <p>Last Modified: <span id="modified"></span></p>
+        <p>© <span id="year"></span> JVOCX</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
+
 </body>
 
 </html>
