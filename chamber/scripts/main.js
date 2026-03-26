@@ -1,4 +1,4 @@
-// ================= MENU =================
+// MENU
 const btn = document.querySelector("#menu");
 const nav = document.querySelector("#nav");
 
@@ -7,7 +7,7 @@ btn.addEventListener("click", () => {
 });
 
 
-// ================= WEATHER =================
+// WEATHER
 const url = "https://api.openweathermap.org/data/2.5/forecast?lat=-3.73&lon=-38.52&appid=1a5bf49d5a14f958c821d69ef3ab35b3&units=metric";
 
 async function getWeather() {
@@ -15,14 +15,12 @@ async function getWeather() {
         const res = await fetch(url);
         const data = await res.json();
 
-        // CURRENT WEATHER
         document.querySelector("#temp").textContent =
             `Temperature: ${data.list[0].main.temp.toFixed(1)}°C`;
 
         document.querySelector("#desc").textContent =
             data.list[0].weather[0].description;
 
-        // FORECAST (3 DIAS)
         const forecast = document.querySelector("#forecast");
         forecast.innerHTML = "";
 
@@ -42,7 +40,6 @@ async function getWeather() {
 
     } catch (error) {
         console.log("Weather error:", error);
-
         document.querySelector("#temp").textContent = "Weather unavailable";
     }
 }
@@ -50,7 +47,7 @@ async function getWeather() {
 getWeather();
 
 
-// ================= SPOTLIGHT =================
+// SPOTLIGHT
 const membersURL = "data/members.json";
 
 async function getMembers() {
@@ -58,15 +55,11 @@ async function getMembers() {
         const res = await fetch(membersURL);
         const data = await res.json();
 
-        // FILTRA GOLD E SILVER
         const filtered = data.members.filter(m =>
             m.membership === "Gold" || m.membership === "Silver"
         );
 
-        // RANDOMIZA
         const shuffled = filtered.sort(() => 0.5 - Math.random());
-
-        // PEGA 3
         const selected = shuffled.slice(0, 3);
 
         const container = document.querySelector("#spotlights");
@@ -76,12 +69,12 @@ async function getMembers() {
             const card = document.createElement("div");
 
             card.innerHTML = `
-                <h3>${m.name}</h3>
-                <p>${m.phone}</p>
-                <p>${m.address}</p>
-                <p><strong>${m.membership}</strong></p>
-                <a href="${m.website}" target="_blank">Visit Website</a>
-            `;
+        <h3>${m.name}</h3>
+        <p>${m.phone}</p>
+        <p>${m.address}</p>
+        <p><strong>${m.membership}</strong></p>
+        <a href="${m.website}" target="_blank">Visit Website</a>
+      `;
 
             container.appendChild(card);
         });
