@@ -7,12 +7,31 @@
 
     <title>Join | Fortaleza Chamber</title>
 
+    <meta name="description"
+        content="Join the Fortaleza Chamber of Commerce and grow your business through networking, events, and exclusive opportunities.">
+    <meta name="author" content="João Victor Oliveira Cavalcante">
+
+    <link rel="icon" href="images/favicon.png">
+
+    <meta property="og:title" content="Join Fortaleza Chamber of Commerce">
+    <meta property="og:description"
+        content="Become a member and connect with businesses, events, and growth opportunities in Fortaleza.">
+    <meta property="og:image" content="https://jvocx.github.io/wdd231/chamber/images/og-image.jpg">
+    <meta property="og:url" content="https://jvocx.github.io/wdd231/chamber/join.html">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/join.css">
 
+    <!-- JS -->
     <script defer src="scripts/main.js"></script>
     <script defer src="scripts/join.js"></script>
 
@@ -92,10 +111,10 @@
 
         <section class="cards">
 
-            <button type="button" class="card" onclick="openModal('npModal')">NP Membership</button>
-            <button type="button" class="card" onclick="openModal('bronzeModal')">Bronze</button>
-            <button type="button" class="card" onclick="openModal('silverModal')">Silver</button>
-            <button type="button" class="card" onclick="openModal('goldModal')">Gold</button>
+            <button type="button" class="card" data-modal="npModal">NP Membership</button>
+            <button type="button" class="card" data-modal="bronzeModal">Bronze</button>
+            <button type="button" class="card" data-modal="silverModal">Silver</button>
+            <button type="button" class="card" data-modal="goldModal">Gold</button>
 
         </section>
 
@@ -104,7 +123,7 @@
     <!-- MODALS -->
     <div id="npModal" class="modal">
         <div class="modal-content">
-            <button onclick="closeModal('npModal')">Close</button>
+            <button aria-label="Close modal">Close</button>
             <h2>NP Membership</h2>
             <p>Free membership for non-profit organizations.</p>
         </div>
@@ -112,7 +131,7 @@
 
     <div id="bronzeModal" class="modal">
         <div class="modal-content">
-            <button onclick="closeModal('bronzeModal')">Close</button>
+            <button aria-label="Close modal">Close</button>
             <h2>Bronze Membership</h2>
             <p>Basic advertising and event participation.</p>
         </div>
@@ -120,7 +139,7 @@
 
     <div id="silverModal" class="modal">
         <div class="modal-content">
-            <button onclick="closeModal('silverModal')">Close</button>
+            <button aria-label="Close modal">Close</button>
             <h2>Silver Membership</h2>
             <p>Increased exposure and discounts on events.</p>
         </div>
@@ -128,11 +147,15 @@
 
     <div id="goldModal" class="modal">
         <div class="modal-content">
-            <button onclick="closeModal('goldModal')">Close</button>
+            <button aria-label="Close modal">Close</button>
             <h2>Gold Membership</h2>
             <p>Premium spotlight and exclusive benefits.</p>
         </div>
     </div>
+
+    <footer>
+        <p>© 2026 Fortaleza Chamber</p>
+    </footer>
 
 </body>
 

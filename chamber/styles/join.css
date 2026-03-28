@@ -82,3 +82,8 @@ textarea {
         grid-template-columns: 2fr 1fr;
     }
 }
+
+.modal-content {
+    background: white;
+    color: black;
+}
