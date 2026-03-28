@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thank You</title>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Thank You for Joining!</h1>
+    </header>
+
+    <main>
+
+        <h2>Your Application Details</h2>
+
+        <div id="output"></div>
+
+    </main>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        document.getElementById("output").innerHTML = `
+<p><strong>First Name:</strong> ${params.get("fname")}</p>
+<p><strong>Last Name:</strong> ${params.get("lname")}</p>
+<p><strong>Email:</strong> ${params.get("email")}</p>
+<p><strong>Phone:</strong> ${params.get("phone")}</p>
+<p><strong>Organization:</strong> ${params.get("organization")}</p>
+<p><strong>Date:</strong> ${params.get("timestamp")}</p>
+`;
+    </script>
+
+</body>
+
+</html>
