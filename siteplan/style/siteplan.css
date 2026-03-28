@@ -1,0 +1,44 @@
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #0B3D91;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+h1,
+h2 {
+    font-family: Montserrat, sans-serif;
+    color: #0B3D91;
+}
+
+h3 {
+    color: #F4A261;
+}
+
+section {
+    margin-bottom: 30px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+strong {
+    color: #F4A261;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #0B3D91;
+    color: white;
+}
