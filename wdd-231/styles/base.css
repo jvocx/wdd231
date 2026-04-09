@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+main {
+    padding: 1rem;
+}
+
+#cards-container {
+    display: grid;
+    gap: 1rem;
+
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #fff;
+}
