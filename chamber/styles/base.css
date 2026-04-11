@@ -9,12 +9,33 @@ main {
 
 #cards-container {
     display: grid;
-    grid-template-areas:
-        "card";
     gap: 1rem;
+
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
 }
 
-#cards-container div {
+.card {
     border: 1px solid #ccc;
     padding: 1rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #fff;
 }

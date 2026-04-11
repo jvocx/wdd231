@@ -37,7 +37,7 @@ export const places = [
     },
     {
         name: "Dragão do Mar",
-        address: "Praia de Iracema",
+        address: "Fortaleza",
         description: "Centro cultural.",
         image: "images/place7.webp"
     },

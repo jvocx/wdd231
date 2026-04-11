@@ -2,9 +2,11 @@ import { places } from "../data/places.mjs";
 
 const container = document.querySelector("#cards-container");
 
-// Criar cards
-places.forEach(place => {
+// CRIAR CARDS
+places.forEach((place, index) => {
     const card = document.createElement("div");
+    card.classList.add("card");
+    card.style.gridArea = `card${index + 1}`;
 
     card.innerHTML = `
     <h2>${place.name}</h2>
