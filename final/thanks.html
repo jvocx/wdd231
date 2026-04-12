@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thank You</title>
+    <meta name="description" content="Thank you for contacting us.">
+    <meta name="author" content="João Victor">
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+
+    <header>
+        <h1>🏍 South America Journey</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Thank You!</h2>
+            <p>Your message has been received successfully.</p>
+
+            <div id="formData"></div>
+
+            <a href="index.html">⬅ Back to Home</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 João Victor</p>
+
+        <p>
+            🎥 <a href="https://www.youtube.com/" target="_blank">Project Video</a>
+        </p>
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        const name = params.get("name");
+        const email = params.get("email");
+        const message = params.get("message");
+
+        const container = document.querySelector("#formData");
+
+        if (name || email || message) {
+            container.innerHTML = `
+      <h3>Submitted Information:</h3>
+      <p><strong>Name:</strong> ${name || "N/A"}</p>
+      <p><strong>Email:</strong> ${email || "N/A"}</p>
+      <p><strong>Message:</strong> ${message || "N/A"}</p>
+    `;
+        }
+    </script>
+
+</body>
+
+</html>

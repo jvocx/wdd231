@@ -1,0 +1,192 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background: #111;
+    color: white;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 1.4rem;
+}
+
+/* NAV */
+#menuBtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#navMenu {
+    display: none;
+}
+
+#navMenu.open {
+    display: block;
+}
+
+#navMenu ul {
+    list-style: none;
+}
+
+#navMenu li {
+    margin: 10px 0;
+}
+
+#navMenu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* MAIN */
+main {
+    padding: 1rem;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero h2 {
+    margin-bottom: 10px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.card {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* DESTINATIONS GRID */
+#places {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+#places .card button {
+    margin-top: 10px;
+    padding: 8px;
+    border: none;
+    background: #0077cc;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background: #111;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #00bfff;
+}
+
+/* ========================= */
+/* 📱 TABLET (768px+) */
+/* ========================= */
+
+@media (min-width: 768px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #menuBtn {
+        display: none;
+    }
+
+    #navMenu {
+        display: block !important;
+    }
+
+    #navMenu ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    #navMenu li {
+        margin: 0;
+    }
+
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #places {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ========================= */
+/* 💻 DESKTOP (1024px+) */
+/* ========================= */
+
+@media (min-width: 1024px) {
+
+    main {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    #places {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}

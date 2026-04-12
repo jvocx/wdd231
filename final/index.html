@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Motorcycle South America Trip</title>
+    <meta name="description"
+        content="A journey across South America by motorcycle exploring destinations, cultures, and experiences.">
+    <meta name="author" content="João Victor">
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+
+    <header>
+        <h1>🏍 South America Journey</h1>
+
+        <button id="menuBtn">☰</button>
+
+        <nav id="navMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h2>From Brazil to Argentina on a 125cc Motorcycle</h2>
+            <p>
+                This project documents a real journey across South America, exploring cities, cultures,
+                and landscapes through an unforgettable adventure.
+            </p>
+        </section>
+
+        <section class="highlights">
+            <h2>Trip Highlights</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>🌎 Multiple Countries</h3>
+                    <p>Brazil, Bolivia, Chile, and Argentina.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🏔 Extreme Landscapes</h3>
+                    <p>From beaches to mountains and deserts.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🛣 Long Distance</h3>
+                    <p>Over 6000 km traveled by motorcycle.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 João Victor</p>
+
+        <p>
+            🎥 Project Video:
+            <a href="https://www.youtube.com/" target="_blank">Watch Here</a>
+        </p>
+
+        <p>
+            <a href="#">Attributions</a>
+        </p>
+    </footer>
+
+    <script>
+        const menuBtn = document.querySelector("#menuBtn");
+        const navMenu = document.querySelector("#navMenu");
+
+        menuBtn.addEventListener("click", () => {
+            navMenu.classList.toggle("open");
+        });
+    </script>
+
+</body>
+
+</html>

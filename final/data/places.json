@@ -1,0 +1,17 @@
+[
+  {"name":"Fortaleza","country":"Brasil","distance":"0 km","description":"Ponto de partida"},
+  {"name":"Teresina","country":"Brasil","distance":"600 km","description":"Capital do Piauí"},
+  {"name":"Palmas","country":"Brasil","distance":"1300 km","description":"Cidade planejada"},
+  {"name":"Goiânia","country":"Brasil","distance":"2000 km","description":"Centro urbano"},
+  {"name":"Campo Grande","country":"Brasil","distance":"2600 km","description":"Porta do Pantanal"},
+  {"name":"Corumbá","country":"Brasil","distance":"2900 km","description":"Fronteira com Bolívia"},
+  {"name":"Santa Cruz","country":"Bolívia","distance":"3200 km","description":"Cidade vibrante"},
+  {"name":"La Paz","country":"Bolívia","distance":"3600 km","description":"Capital mais alta"},
+  {"name":"Uyuni","country":"Bolívia","distance":"3900 km","description":"Salar famoso"},
+  {"name":"San Pedro","country":"Chile","distance":"4200 km","description":"Deserto do Atacama"},
+  {"name":"Salta","country":"Argentina","distance":"4500 km","description":"Cultura forte"},
+  {"name":"Cafayate","country":"Argentina","distance":"4700 km","description":"Região de vinhos"},
+  {"name":"Córdoba","country":"Argentina","distance":"5200 km","description":"Cidade histórica"},
+  {"name":"Rosário","country":"Argentina","distance":"5600 km","description":"Beira do rio"},
+  {"name":"Buenos Aires","country":"Argentina","distance":"6000 km","description":"Destino final"}
+]
