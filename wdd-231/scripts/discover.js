@@ -4,19 +4,21 @@ const container = document.querySelector("#cards-container");
 
 // CRIAR CARDS
 places.forEach((place, index) => {
-    const card = document.createElement("div");
+    const card = document.createElement("section"); // 👈 MELHOR que div
     card.classList.add("card");
+
+    // 👇 DUPLA GARANTIA pro grid (JS + CSS)
     card.style.gridArea = `card${index + 1}`;
 
     card.innerHTML = `
-    <h2>${place.name}</h2>
-    <figure>
-      <img src="${place.image}" alt="${place.name}" loading="lazy">
-    </figure>
-    <address>${place.address}</address>
-    <p>${place.description}</p>
-    <button>Learn More</button>
-  `;
+        <h2>${place.name}</h2>
+        <figure>
+            <img src="${place.image}" alt="${place.name}" loading="lazy">
+        </figure>
+        <address>${place.address}</address>
+        <p>${place.description}</p>
+        <button type="button">Learn More</button>
+    `;
 
     container.appendChild(card);
 });

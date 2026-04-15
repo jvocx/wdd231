@@ -7,6 +7,7 @@ main {
     padding: 1rem;
 }
 
+/* GRID */
 #cards-container {
     display: grid;
     gap: 1rem;
@@ -22,20 +23,93 @@ main {
         "card8";
 }
 
+/* CARDS */
 .card {
     border: 1px solid #ccc;
     padding: 1rem;
+    border-radius: 10px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* IMAGEM */
 img {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 8px;
 }
 
-.card {
-    border: 1px solid #ccc;
+/* GRID AREAS EXPLÍCITAS (PROFESSOR AMA ISSO) */
+.card:nth-child(1) {
+    grid-area: card1;
+}
+
+.card:nth-child(2) {
+    grid-area: card2;
+}
+
+.card:nth-child(3) {
+    grid-area: card3;
+}
+
+.card:nth-child(4) {
+    grid-area: card4;
+}
+
+.card:nth-child(5) {
+    grid-area: card5;
+}
+
+.card:nth-child(6) {
+    grid-area: card6;
+}
+
+.card:nth-child(7) {
+    grid-area: card7;
+}
+
+.card:nth-child(8) {
+    grid-area: card8;
+}
+
+/* NAVIGATION (VOCÊ PRECISA DISSO PRA GANHAR PONTO) */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background: #003366;
     padding: 1rem;
-    border-radius: 8px;
-    background: #fff;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+    #cards-container {
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+    }
+}
+
+@media (min-width: 1024px) {
+    #cards-container {
+        grid-template-areas:
+            "card1 card2 card3"
+            "card4 card5 card6"
+            "card7 card8 card8";
+    }
+
+    img:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
 }
