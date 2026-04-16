@@ -1,45 +1,50 @@
-import { places } from "../data/places.mjs";
-
-const container = document.querySelector("#cards-container");
-
-// CREATE CARDS
-places.forEach((place, index) => {
-    const card = document.createElement("section"); // melhor semântica
-    card.classList.add("card");
-
-    // grid areas (dupla garantia)
-    card.style.gridArea = `card${index + 1}`;
-
-    card.innerHTML = `
-        <h2>${place.name}</h2>
-        <figure>
-            <img src="${place.image}" alt="${place.name}" loading="lazy">
-        </figure>
-        <address>${place.address}</address>
-        <p>${place.description}</p>
-        <button type="button">Learn More</button>
-    `;
-
-    container.appendChild(card);
-});
-
-// LOCAL STORAGE MESSAGE
-const message = document.querySelector("#visit-message");
-
-const lastVisit = localStorage.getItem("lastVisit");
-const now = Date.now();
-
-if (!lastVisit) {
-    message.textContent = "Welcome! Let us know if you have any questions.";
-} else {
-    const diff = now - lastVisit;
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-
-    if (days < 1) {
-        message.textContent = "Back so soon! Awesome!";
-    } else {
-        message.textContent = `You last visited ${days} day${days === 1 ? "" : "s"} ago.`;
+export const places = [
+    {
+        name: "Praia de Iracema",
+        address: "Fortaleza - CE",
+        description: "One of the most famous beaches in the city.",
+        image: "images/place1.webp"
+    },
+    {
+        name: "Beira-Mar",
+        address: "Fortaleza - CE",
+        description: "Great place for walking, tourism, and enjoying the ocean view.",
+        image: "images/place2.webp"
+    },
+    {
+        name: "Central Market",
+        address: "Downtown Fortaleza",
+        description: "A popular spot for local crafts, souvenirs, and culture.",
+        image: "images/place3.webp"
+    },
+    {
+        name: "Metropolitan Cathedral",
+        address: "Downtown Fortaleza",
+        description: "An impressive architectural landmark and important religious site.",
+        image: "images/place4.webp"
+    },
+    {
+        name: "Cocó Park",
+        address: "Fortaleza",
+        description: "A large green area perfect for outdoor activities and relaxation.",
+        image: "images/place5.webp"
+    },
+    {
+        name: "Beach Park",
+        address: "Aquiraz - CE",
+        description: "A famous water park and one of the main tourist attractions in Ceará.",
+        image: "images/place6.webp"
+    },
+    {
+        name: "Dragão do Mar Center",
+        address: "Fortaleza",
+        description: "A cultural center with museums, theaters, and art exhibitions.",
+        image: "images/place7.webp"
+    },
+    {
+        name: "Iguatemi Shopping",
+        address: "Fortaleza",
+        description: "A large shopping mall with stores, restaurants, and entertainment.",
+        image: "images/place8.webp"
     }
-}
-
-localStorage.setItem("lastVisit", now);
+];
