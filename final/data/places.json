@@ -1,17 +1,92 @@
 [
-  {"name":"Fortaleza","country":"Brasil","distance":"0 km","description":"Ponto de partida"},
-  {"name":"Teresina","country":"Brasil","distance":"600 km","description":"Capital do Piauí"},
-  {"name":"Palmas","country":"Brasil","distance":"1300 km","description":"Cidade planejada"},
-  {"name":"Goiânia","country":"Brasil","distance":"2000 km","description":"Centro urbano"},
-  {"name":"Campo Grande","country":"Brasil","distance":"2600 km","description":"Porta do Pantanal"},
-  {"name":"Corumbá","country":"Brasil","distance":"2900 km","description":"Fronteira com Bolívia"},
-  {"name":"Santa Cruz","country":"Bolívia","distance":"3200 km","description":"Cidade vibrante"},
-  {"name":"La Paz","country":"Bolívia","distance":"3600 km","description":"Capital mais alta"},
-  {"name":"Uyuni","country":"Bolívia","distance":"3900 km","description":"Salar famoso"},
-  {"name":"San Pedro","country":"Chile","distance":"4200 km","description":"Deserto do Atacama"},
-  {"name":"Salta","country":"Argentina","distance":"4500 km","description":"Cultura forte"},
-  {"name":"Cafayate","country":"Argentina","distance":"4700 km","description":"Região de vinhos"},
-  {"name":"Córdoba","country":"Argentina","distance":"5200 km","description":"Cidade histórica"},
-  {"name":"Rosário","country":"Argentina","distance":"5600 km","description":"Beira do rio"},
-  {"name":"Buenos Aires","country":"Argentina","distance":"6000 km","description":"Destino final"}
+  {
+    "name": "Fortaleza",
+    "country": "Brazil",
+    "distance": "0 km",
+    "description": "Starting point of the journey"
+  },
+  {
+    "name": "Teresina",
+    "country": "Brazil",
+    "distance": "600 km",
+    "description": "Capital of Piauí state"
+  },
+  {
+    "name": "Palmas",
+    "country": "Brazil",
+    "distance": "1300 km",
+    "description": "A planned modern city"
+  },
+  {
+    "name": "Goiânia",
+    "country": "Brazil",
+    "distance": "2000 km",
+    "description": "A major urban center"
+  },
+  {
+    "name": "Campo Grande",
+    "country": "Brazil",
+    "distance": "2600 km",
+    "description": "Gateway to the Pantanal region"
+  },
+  {
+    "name": "Corumbá",
+    "country": "Brazil",
+    "distance": "2900 km",
+    "description": "Border city with Bolivia"
+  },
+  {
+    "name": "Santa Cruz",
+    "country": "Bolivia",
+    "distance": "3200 km",
+    "description": "A vibrant and growing city"
+  },
+  {
+    "name": "La Paz",
+    "country": "Bolivia",
+    "distance": "3600 km",
+    "description": "The highest capital city in the world"
+  },
+  {
+    "name": "Uyuni",
+    "country": "Bolivia",
+    "distance": "3900 km",
+    "description": "Famous salt flats destination"
+  },
+  {
+    "name": "San Pedro",
+    "country": "Chile",
+    "distance": "4200 km",
+    "description": "Gateway to the Atacama Desert"
+  },
+  {
+    "name": "Salta",
+    "country": "Argentina",
+    "distance": "4500 km",
+    "description": "Known for strong culture and history"
+  },
+  {
+    "name": "Cafayate",
+    "country": "Argentina",
+    "distance": "4700 km",
+    "description": "Famous wine region"
+  },
+  {
+    "name": "Córdoba",
+    "country": "Argentina",
+    "distance": "5200 km",
+    "description": "Historic and cultural city"
+  },
+  {
+    "name": "Rosário",
+    "country": "Argentina",
+    "distance": "5600 km",
+    "description": "City by the Paraná River"
+  },
+  {
+    "name": "Buenos Aires",
+    "country": "Argentina",
+    "distance": "6000 km",
+    "description": "Final destination of the journey"
+  }
 ]
