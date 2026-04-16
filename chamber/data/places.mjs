@@ -1,50 +1,45 @@
-export const places = [
-    {
-        name: "Praia de Iracema",
-        address: "Fortaleza - CE",
-        description: "Uma das praias mais famosas da cidade.",
-        image: "images/place1.webp"
-    },
-    {
-        name: "Beira-Mar",
-        address: "Fortaleza - CE",
-        description: "Ótima para caminhada e turismo.",
-        image: "images/place2.webp"
-    },
-    {
-        name: "Mercado Central",
-        address: "Centro",
-        description: "Artesanato e cultura local.",
-        image: "images/place3.webp"
-    },
-    {
-        name: "Catedral Metropolitana",
-        address: "Centro",
-        description: "Arquitetura impressionante.",
-        image: "images/place4.webp"
-    },
-    {
-        name: "Parque do Cocó",
-        address: "Fortaleza",
-        description: "Área verde para lazer.",
-        image: "images/place5.webp"
-    },
-    {
-        name: "Beach Park",
-        address: "Aquiraz - CE",
-        description: "Parque aquático famoso.",
-        image: "images/place6.webp"
-    },
-    {
-        name: "Dragão do Mar",
-        address: "Fortaleza",
-        description: "Centro cultural.",
-        image: "images/place7.webp"
-    },
-    {
-        name: "Shopping Iguatemi",
-        address: "Fortaleza",
-        description: "Centro de compras.",
-        image: "images/place8.webp"
+import { places } from "../data/places.mjs";
+
+const container = document.querySelector("#cards-container");
+
+// CREATE CARDS
+places.forEach((place, index) => {
+    const card = document.createElement("section"); // melhor semântica
+    card.classList.add("card");
+
+    // grid areas (dupla garantia)
+    card.style.gridArea = `card${index + 1}`;
+
+    card.innerHTML = `
+        <h2>${place.name}</h2>
+        <figure>
+            <img src="${place.image}" alt="${place.name}" loading="lazy">
+        </figure>
+        <address>${place.address}</address>
+        <p>${place.description}</p>
+        <button type="button">Learn More</button>
+    `;
+
+    container.appendChild(card);
+});
+
+// LOCAL STORAGE MESSAGE
+const message = document.querySelector("#visit-message");
+
+const lastVisit = localStorage.getItem("lastVisit");
+const now = Date.now();
+
+if (!lastVisit) {
+    message.textContent = "Welcome! Let us know if you have any questions.";
+} else {
+    const diff = now - lastVisit;
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+    if (days < 1) {
+        message.textContent = "Back so soon! Awesome!";
+    } else {
+        message.textContent = `You last visited ${days} day${days === 1 ? "" : "s"} ago.`;
     }
-];
+}
+
+localStorage.setItem("lastVisit", now);

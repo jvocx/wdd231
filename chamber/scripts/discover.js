@@ -2,26 +2,28 @@ import { places } from "../data/places.mjs";
 
 const container = document.querySelector("#cards-container");
 
-// CRIAR CARDS
+// CREATE CARDS
 places.forEach((place, index) => {
-    const card = document.createElement("div");
+    const card = document.createElement("section"); // melhor semântica
     card.classList.add("card");
+
+    // grid areas (dupla garantia)
     card.style.gridArea = `card${index + 1}`;
 
     card.innerHTML = `
-    <h2>${place.name}</h2>
-    <figure>
-      <img src="${place.image}" alt="${place.name}" loading="lazy">
-    </figure>
-    <address>${place.address}</address>
-    <p>${place.description}</p>
-    <button>Learn More</button>
-  `;
+        <h2>${place.name}</h2>
+        <figure>
+            <img src="${place.image}" alt="${place.name}" loading="lazy">
+        </figure>
+        <address>${place.address}</address>
+        <p>${place.description}</p>
+        <button type="button">Learn More</button>
+    `;
 
     container.appendChild(card);
 });
 
-// LOCAL STORAGE
+// LOCAL STORAGE MESSAGE
 const message = document.querySelector("#visit-message");
 
 const lastVisit = localStorage.getItem("lastVisit");
