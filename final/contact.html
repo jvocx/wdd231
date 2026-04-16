@@ -1,14 +1,72 @@
-<form action="thanks.html" method="get">
+<!DOCTYPE html>
+<html lang="en">
 
-    <label>Name:</label>
-    <input type="text" name="name" required>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <label>Email:</label>
-    <input type="email" name="email" required>
+    <title>Contact | South America Journey</title>
+    <meta name="description" content="Contact us about the South America motorcycle journey.">
+    <meta name="author" content="João Victor">
 
-    <label>Message:</label>
-    <textarea name="message" required></textarea>
+    <!-- 🔥 COLOCA AQUI -->
+    <meta property="og:title" content="South America Journey">
+    <meta property="og:description" content="Motorcycle trip across South America.">
+    <meta property="og:image" content="https://jvocx.github.io/wdd231/final/images/hero.jpg">
+    <meta property="og:url" content="https://jvocx.github.io/wdd231/final/contact.html">
 
-    <button type="submit">Send</button>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
 
-</form>
+<body>
+
+    <header>
+        <h1>🏍 South America Journey</h1>
+
+        <button id="menuBtn">☰</button>
+
+        <nav id="navMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Contact Us</h2>
+
+        <form action="thanks.html" method="get">
+            <label for="name">Name:</label>
+            <input id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2026 João Victor</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+    <script>
+        const menuBtn = document.querySelector("#menuBtn");
+        const navMenu = document.querySelector("#navMenu");
+        menuBtn.addEventListener("click", () => {
+            navMenu.classList.toggle("open");
+        });
+    </script>
+
+</body>
+
+</html>
