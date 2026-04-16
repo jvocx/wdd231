@@ -2,12 +2,12 @@ import { places } from "../data/places.mjs";
 
 const container = document.querySelector("#cards-container");
 
-// CRIAR CARDS
+// CREATE CARDS
 places.forEach((place, index) => {
-    const card = document.createElement("section"); // 👈 MELHOR que div
+    const card = document.createElement("section"); // melhor semântica
     card.classList.add("card");
 
-    // 👇 DUPLA GARANTIA pro grid (JS + CSS)
+    // grid areas (dupla garantia)
     card.style.gridArea = `card${index + 1}`;
 
     card.innerHTML = `
@@ -23,7 +23,7 @@ places.forEach((place, index) => {
     container.appendChild(card);
 });
 
-// LOCAL STORAGE
+// LOCAL STORAGE MESSAGE
 const message = document.querySelector("#visit-message");
 
 const lastVisit = localStorage.getItem("lastVisit");
