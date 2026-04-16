@@ -5,12 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Destinations | South America Journey</title>
-    <meta name="description" content="Explore destinations across South America by motorcycle.">
+    <title>Contact | South America Journey</title>
+    <meta name="description" content="Contact us about the South America motorcycle journey.">
     <meta name="author" content="João Victor">
 
     <link rel="stylesheet" href="styles/main.css">
     <link rel="icon" href="images/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -31,49 +36,38 @@
 
     <main>
 
-        <h2>Destinations</h2>
+        <h2>Contact Us</h2>
 
-        <div id="places"></div>
+        <form action="thanks.html" method="get">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+
+        </form>
 
     </main>
 
-    <!-- MODAL (OBRIGATÓRIO PRA RUBRICA) -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <p id="modal-text"></p>
-            <button onclick="closeModal()">Close</button>
-        </div>
-    </div>
-
     <footer>
         <p>© 2026 João Victor</p>
-
-        <p>
-            🎥 <a href="https://www.youtube.com/" target="_blank">Project Video</a>
-        </p>
     </footer>
 
     <script src="js/main.js"></script>
 
-    <!-- SCRIPT DO MENU + MODAL -->
     <script>
-        // MENU
         const menuBtn = document.querySelector("#menuBtn");
         const navMenu = document.querySelector("#navMenu");
 
         menuBtn.addEventListener("click", () => {
             navMenu.classList.toggle("open");
         });
-
-        // MODAL
-        function openModal(text) {
-            document.getElementById("modal-text").textContent = text;
-            document.getElementById("modal").style.display = "block";
-        }
-
-        function closeModal() {
-            document.getElementById("modal").style.display = "none";
-        }
     </script>
 
 </body>
