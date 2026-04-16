@@ -1,6 +1,81 @@
-<main>
-    <h1>Destinos</h1>
-    <div id="places"></div>
-</main>
+<!DOCTYPE html>
+<html lang="en">
 
-<script src="js/main.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Destinations | South America Journey</title>
+    <meta name="description" content="Explore destinations across South America by motorcycle.">
+    <meta name="author" content="João Victor">
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+
+    <header>
+        <h1>🏍 South America Journey</h1>
+
+        <button id="menuBtn">☰</button>
+
+        <nav id="navMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <h2>Destinations</h2>
+
+        <div id="places"></div>
+
+    </main>
+
+    <!-- MODAL (OBRIGATÓRIO PRA RUBRICA) -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p id="modal-text"></p>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 João Victor</p>
+
+        <p>
+            🎥 <a href="https://www.youtube.com/" target="_blank">Project Video</a>
+        </p>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+    <!-- SCRIPT DO MENU + MODAL -->
+    <script>
+        // MENU
+        const menuBtn = document.querySelector("#menuBtn");
+        const navMenu = document.querySelector("#navMenu");
+
+        menuBtn.addEventListener("click", () => {
+            navMenu.classList.toggle("open");
+        });
+
+        // MODAL
+        function openModal(text) {
+            document.getElementById("modal-text").textContent = text;
+            document.getElementById("modal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
